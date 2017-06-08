@@ -7,35 +7,10 @@ let s:map_keys = exists('g:disable_key_mappings') ? 0 : 1
 " Remaps specifically a few keys for a better terminal buffer experience.
 "
 " - Rebind <Esc> to switch to normal mode
-" - Bind Alt+hjkl, Ctrl+arrows to navigate through windows (eg. switching to
-"   buffer/windows left, right etc.)
+" - Bind Ctrl+hjkl navigate through windows 
 fun! s:defineMaps()
   " Allow hitting <Esc> to switch to normal mode
   tnoremap <buffer> <Esc> <C-\><C-n>
-
-  " Alt+[hjkl] to navigate through windows in insert mode
-  tnoremap <buffer> <A-h> <C-\><C-n><C-w>h
-  tnoremap <buffer> <A-j> <C-\><C-n><C-w>j
-  tnoremap <buffer> <A-k> <C-\><C-n><C-w>k
-  tnoremap <buffer> <A-l> <C-\><C-n><C-w>l
-
-  " Alt+[hjkl] to navigate through windows in normal mode
-  nnoremap <buffer> <A-h> <C-w>h
-  nnoremap <buffer> <A-j> <C-w>j
-  nnoremap <buffer> <A-k> <C-w>k
-  nnoremap <buffer> <A-l> <C-w>l
-
-  " Ctrl+Arrows to navigate through windows in insert mode
-  tnoremap <buffer> <C-Left>  <C-\><C-n><C-w>h
-  tnoremap <buffer> <C-Down>  <C-\><C-n><C-w>j
-  tnoremap <buffer> <C-Up>    <C-\><C-n><C-w>k
-  tnoremap <buffer> <C-Right> <C-\><C-n><C-w>l
-
-  " Ctrl+Arrows to navigate through windows in normal mode
-  nnoremap <buffer> <C-Left>  <C-w>h
-  nnoremap <buffer> <C-Down>  <C-w>j
-  nnoremap <buffer> <C-Up>    <C-w>k
-  nnoremap <buffer> <C-Right> <C-w>l
 endfunction
 
 " Opens up a new buffer, either vertical or horizontal. Count can be used to
