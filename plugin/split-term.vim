@@ -5,7 +5,6 @@ let s:map_keys = exists('g:disable_key_mappings') ? 0 : 1
 " utilities around neovim's :term
 
 " Remaps specifically a few keys for a better terminal buffer experience.
-"
 " - Rebind <Esc> to switch to normal mode
 " - Bind Ctrl+hjkl navigate through windows 
 fun! s:defineMaps()
